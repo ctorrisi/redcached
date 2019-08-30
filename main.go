@@ -1,7 +1,7 @@
 package main
 
 import (
-	"./rcdaemon"
+	"github.com/brandt/redcached/rcdaemon"
 )
 
 func main() {
