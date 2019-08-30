@@ -12,7 +12,7 @@ var backend *redis.Client
 
 func init() {
 	backend = redis.NewClient(&redis.Options{
-		Addr:     ":6379",
+		Addr:     os.Getenv("REDIS_HOST") + ":6379",
 		PoolSize: 100,
 	})
 }

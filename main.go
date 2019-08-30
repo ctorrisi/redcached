@@ -2,9 +2,25 @@ package main
 
 import (
 	"./rcdaemon"
+	"os"
+	"strconv"
+	"log"
 )
 
 func main() {
+	redisHost, exists := os.LookupEnv("REDIS_HOST")
+	if !exists {
+		panic("REDIS_HOST env should be provided")
+	}
+
+	redisPortStr, exists := os.LookupEnv("REDIS_PORT")
+	if !exists {
+		redisPortStr = "6379"
+	}
+
+	redisPort, err := strconv.Atoi(redisPortStr)
+	log.Printf("Using redis connection to %s:%d", redisHost, redisPort)
+
 	server, err := rcdaemon.NewServer("", nil)
 	if err != nil {
 		panic(err)

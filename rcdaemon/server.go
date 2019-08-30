@@ -23,7 +23,7 @@ type Server struct {
 
 func NewServer(addr string, methods map[string]HandlerFn) (*Server, error) {
 	if addr == "" {
-		addr = fmt.Sprintf("127.0.0.1:%d", DEFAULT_PORT)
+		addr = fmt.Sprintf("0.0.0.0:%d", DEFAULT_PORT)
 	}
 	if methods == nil {
 		methods = make(map[string]HandlerFn)
