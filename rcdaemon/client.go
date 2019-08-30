@@ -2,7 +2,7 @@ package rcdaemon
 
 import (
 	"bufio"
-	"github.com/brandt/redcached/protocol"
+	"../protocol"
 	"io"
 	"log"
 	"net"

@@ -2,7 +2,7 @@ package rcdaemon
 
 import (
 	"fmt"
-	"github.com/brandt/redcached/protocol"
+	"../protocol"
 	"gopkg.in/redis.v3"
 	"strconv"
 	"time"
