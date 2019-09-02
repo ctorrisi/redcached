@@ -6,6 +6,7 @@ import (
 	"gopkg.in/redis.v3"
 	"strconv"
 	"time"
+	"os"
 )
 
 var backend *redis.Client
