@@ -3,7 +3,7 @@ package rcdaemon
 import (
 	"fmt"
 	"github.com/ctorrisi/redcached/protocol"
-	"gopkg.in/redis.v3"
+	"gopkg.in/redis.v5"
 	"os"
 	"strconv"
 	"time"
