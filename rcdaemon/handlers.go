@@ -2,11 +2,11 @@ package rcdaemon
 
 import (
 	"fmt"
-	"../protocol"
+	"github.com/ctorrisi/redcached/protocol"
 	"gopkg.in/redis.v3"
+	"os"
 	"strconv"
 	"time"
-	"os"
 )
 
 var backend *redis.Client

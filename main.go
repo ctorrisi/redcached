@@ -1,16 +1,16 @@
 package main
 
 import (
-	"./rcdaemon"
+	"github.com/ctorrisi/redcached/rcdaemon"
+	"log"
 	"os"
 	"strconv"
-	"log"
 )
 
 func main() {
 	redisHost, exists := os.LookupEnv("REDIS_HOST")
 	if !exists {
-		panic("REDIS_HOST env should be provided")
+		redisHost = "127.0.0.1"
 	}
 
 	redisPortStr, exists := os.LookupEnv("REDIS_PORT")

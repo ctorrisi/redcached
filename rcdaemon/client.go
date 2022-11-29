@@ -2,7 +2,7 @@ package rcdaemon
 
 import (
 	"bufio"
-	"../protocol"
+	"github.com/ctorrisi/redcached/protocol"
 	"io"
 	"log"
 	"net"
